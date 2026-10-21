@@ -1,0 +1,136 @@
+:root {
+  --sb-emerald: #009270;
+  --sb-emerald-bright: #00d09c;
+  --sb-emerald-dark: #006b52;
+  --sb-bg: #080f17;
+  --sb-surface: #0f1924;
+  --sb-surface-2: #162433;
+  --sb-surface-3: #1e3044;
+  --sb-border: rgba(255, 255, 255, 0.09);
+  --sb-text: #f1f5f9;
+  --sb-text-muted: #94a3b8;
+  --sb-live: #ef4444;
+  --sb-gold: #f59e0b;
+}
+
+html.light-theme {
+  --sb-bg: #f1f5f9;
+  --sb-surface: #ffffff;
+  --sb-surface-2: #f8fafc;
+  --sb-surface-3: #e2e8f0;
+  --sb-border: rgba(15, 23, 42, 0.12);
+  --sb-text: #0f172a;
+  --sb-text-muted: #475569;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: var(--sb-bg);
+  color: var(--sb-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.sb-surface {
+  background-color: var(--sb-surface);
+  border-color: var(--sb-border);
+}
+
+.sb-surface-2 {
+  background-color: var(--sb-surface-2);
+  border-color: var(--sb-border);
+}
+
+.sb-surface-3 {
+  background-color: var(--sb-surface-3);
+  border-color: var(--sb-border);
+}
+
+.sb-text-muted {
+  color: var(--sb-text-muted);
+}
+
+/* Custom sleek horizontal scrollbar for Cricbuzz-style match strip & pill bars */
+.no-scrollbar::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+.no-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.no-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.28);
+  border-radius: 9999px;
+}
+.no-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 208, 156, 0.65);
+}
+
+/* Live Pulse Badge */
+@keyframes pulse-live {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.22);
+  }
+}
+
+.live-dot {
+  animation: pulse-live 1.4s infinite ease-in-out;
+}
+
+@keyframes goal-flash {
+  0% { box-shadow: 0 0 0 0 rgba(0, 208, 156, 0.7); }
+  50% { box-shadow: 0 0 32px 10px rgba(245, 158, 11, 0.65); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 208, 156, 0); }
+}
+
+.goal-celebration-flash {
+  animation: goal-flash 1.8s ease-out;
+}
+
+/* Pitch SVG responsive container */
+.pitch-wrapper {
+  background: radial-gradient(circle at 50% 50%, #166534 0%, #14532d 65%, #052e16 100%);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pitch-node {
+  cursor: pointer;
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+.pitch-node:hover {
+  filter: drop-shadow(0 0 8px rgba(250, 204, 21, 0.9));
+}
+
+/* Match Strip Card Active State */
+.ticker-card {
+  transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+.ticker-card:hover {
+  transform: translateY(-2px);
+}
+.ticker-card.active-match {
+  border-color: #00d09c !important;
+  box-shadow: 0 0 0 2px rgba(0, 208, 156, 0.28);
+}
+
+/* Responsive table wrapper */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
