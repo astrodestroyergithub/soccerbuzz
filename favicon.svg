@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <!-- Signature Soccerbuzz Emerald Turf Gradient -->
+    <linearGradient id="sb-bg" x1="6" y1="4" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00b88d" />
+      <stop offset="50%" stop-color="#007d5f" />
+      <stop offset="100%" stop-color="#051c24" />
+    </linearGradient>
+
+    <!-- Electric Golden Buzz Bolt Gradient -->
+    <linearGradient id="sb-bolt" x1="22" y1="10" x2="42" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="45%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+
+    <!-- Crisp Football Sphere Shading -->
+    <radialGradient id="sb-ball" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="72%" stop-color="#e2e8f0" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </radialGradient>
+  </defs>
+
+  <!-- Rounded App-Icon Squircle Base -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#sb-bg)" stroke="#00d09c" stroke-width="2" />
+
+  <!-- Subtle Stadium Pitch Arc Ring -->
+  <circle cx="32" cy="32" r="24" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.5" stroke-dasharray="5 3" />
+
+  <!-- Stylized High-Contrast Football -->
+  <circle cx="32" cy="32" r="19" fill="url(#sb-ball)" stroke="#0f172a" stroke-width="2.2" />
+
+  <!-- Classic Football Pentagon & Seam Geometry (Simplified for 16px-64px clarity) -->
+  <polygon points="32,22 40,28 37,37 27,37 24,28" fill="#0f172a" />
+  <path d="M32 13V22M40 28L49 25M37 37L43 46M27 37L21 46M24 28L15 25" stroke="#0f172a" stroke-width="2.4" stroke-linecap="round" />
+
+  <!-- Signature "BUZZ" Golden Lightning Bolt Slicing Across the Ball -->
+  <path d="M36 9L19 34H31L27 55L46 29H34L36 9Z" fill="url(#sb-bolt)" stroke="#0f172a" stroke-width="2.2" stroke-linejoin="round" />
+
+  <!-- Live Broadcast Pulse Indicator Dot -->
+  <circle cx="51" cy="13" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="1.8" />
+</svg>
